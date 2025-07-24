@@ -1,4 +1,3 @@
-# Portal Maitha
 ## Instruções para execução do projeto abaixo.
 
 ## Requisitos:
