@@ -2,6 +2,7 @@
 describe('Teste E2E - Realização de um pedido com sucesso', () => {
     before(() => {
         cy.gui_login()
+        
     });
     describe('Dado que o usuário acessa a área de produtos', () => {
         context('Quando o usuário adiciona produtos ao carrinho', () => {
