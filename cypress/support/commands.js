@@ -4,9 +4,9 @@ const password = Cypress.env('password_api');
 Cypress.Commands.add('api_login', () => {
     cy.api({
         method: 'POST',
-        url: 'http://localhost:3000/login',
+        url: 'https://restful-booker.herokuapp.com/auth',
         body: {
-            "email": username,
+            "username": username,
             "password": password
         },
         failOnStatusCode: false
@@ -25,23 +25,5 @@ Cypress.Commands.add('gui_login', () => {
 Cypress.Commands.add('generateHeader',  (token) => {
     return {
         "Authorization": `${token}`,
-      } 
-})
-
-Cypress.Commands.add('generateHeaderNoToken',  () => {
-    return {
-        "Authorization": '',
-      } 
-})
-
-Cypress.Commands.add('generateHeaderInvalidToken',  () => {
-    return {
-        "Authorization": Cypress.env('tokenInvalido'),
-      } 
-})
-
-Cypress.Commands.add('generateHeaderExpiredToken',  () => {
-    return {
-        "Authorization": Cypress.env('tokenExpirado'),
       } 
 })

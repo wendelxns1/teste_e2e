@@ -1,3 +1,3 @@
 import './commands'
 import 'cypress-plugin-api'
-import './backend/produtos/cadastroProdutos'
+import './backend/booking/criarBooking'
